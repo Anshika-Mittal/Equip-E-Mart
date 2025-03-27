@@ -127,6 +127,10 @@ const categoriesWithIcon = [
     { id: "omrom", label: "Omrom" },
     { id: "drmorependg", label: "Dr Morepen DG" },
     { id: "polymedicure", label: "Polymedicure" },
+    { id: "polymedicure", label: "Polymedicure" },
+    { id: "aGEasy", label: "AGEasy" },
+    { id: "polymedicure", label: "Polymedicure" },
+    { id: "polymedicure", label: "Polymedicure" },
 ];
 
 function ShoppingHome() {
