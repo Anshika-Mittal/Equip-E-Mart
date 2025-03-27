@@ -48,7 +48,7 @@ function AdminDashboard() {
             marginBottom: "20px",
           }}
         >
-          Welcome to HAND2HAND Admin Dashboard
+          Welcome to Equip-E-Mart Admin Dashboard
         </h1>
         <h2
           style={{

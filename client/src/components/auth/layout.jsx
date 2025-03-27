@@ -7,10 +7,10 @@ function AuthLayout() {
         
         <div className="text-center max-w-md mx-auto py-6">
  <h1 className="text-4xl font-black tracking-tighter text-white mb-4">
-   Welcome to <span className="bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 text-transparent bg-clip-text">Hand2Hand</span>
+  <span className="bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 text-transparent bg-clip-text"> Welcome to Euip-E-Mart</span>
  </h1>
  <p className="text-lg text-slate-300 leading-relaxed">
-   Unlock <span className="text-teal-300 font-semibold">sustainable living</span> with smart, affordable solutions. Whether you're looking to <span className="text-blue-300 font-semibold">rent the latest gadgets</span> or find <span className="text-purple-300 font-semibold">quality renewed furniture</span>, Hand2Hand is your gateway to <span className="text-emerald-300 font-semibold">eco-friendly</span>, budget-conscious choices.
+  <span className="text-teal-300 font-semibold">Your trusted partner  </span>  <span className="text-blue-300 font-semibold">in revolutionizing</span> <span className="text-purple-300 font-semibold">hospital procurement.</span>
  </p>
 </div>
       </div>

@@ -32,8 +32,6 @@ function MenuItems() {
   function handleNavigate(getCurrentMenuItem) {
     sessionStorage.removeItem("filters");
     const currentFilter =
-      getCurrentMenuItem.id !== "home" &&
-      getCurrentMenuItem.id !== "products" &&
       getCurrentMenuItem.id !== "search"
         ? {
             category: [getCurrentMenuItem.id],
@@ -50,11 +48,11 @@ function MenuItems() {
   }
 
   return (
-    <nav className="flex flex-col mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
+    <nav className="flex flex-col  mb-3 lg:mb-0 lg:items-center gap-6 lg:flex-row">
       {shoppingViewHeaderMenuItems.map((menuItem) => (
         <Label
           onClick={() => handleNavigate(menuItem)}
-          className="text-sm font-medium cursor-pointer"
+          className="text-xl gap-3 tracking-tighter font-medium cursor-pointer"
           key={menuItem.id}
         >
           {menuItem.label}
@@ -140,7 +138,7 @@ function ShoppingHeader() {
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
           <HousePlug className="h-6 w-6" />
-          <span className="font-bold">HAND2HAND</span>
+          <span className="font-bold">Equip-E-Mart</span>
         </Link>
         <Sheet>
           <SheetTrigger asChild>

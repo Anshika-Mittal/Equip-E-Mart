@@ -102,85 +102,46 @@ export const addProductFormElements = [
 ];
 
 export const shoppingViewHeaderMenuItems = [
-  // {
-  //   id: "home",
-  //   label: "Home",
-  //   path: "/shop/home",
-  // },
+  { id: "drtrust", label: "Dr Trust", path: "/shop/listing" },
+  { id: "beurer", label: "Beurer", path: "/shop/listing" },
+  { id: "sunfox", label: "Sunfox", path: "/shop/listing" },
+  { id: "omrom", label: "Omrom", path: "/shop/listing" },
+  { id: "drmorependg", label: "Dr Morepen DG", path: "/shop/listing" },
+  { id: "polymedicure", label: "Polymedicure", path: "/shop/listing" },
   {
-    id: "products",
-    label: "Products",
-    path: "/shop/listing",
+    id: "Search",
+    label: "Search",
+    path: "/shop/search",
   },
-  {
-    id: "DoubleBed",
-    label: "Double Bed",
-    path: "/shop/listing",
-  },
-  {
-    id: "SingleBed",
-    label: "Single Bed",
-    path: "/shop/listing",
-  },
-  {
-    id: "Sofa",
-    label: "Sofa",
-    path: "/shop/listing",
-  },
-  {
-    id: "Chair",
-    label: "Chair",
-    path: "/shop/listing",
-  },
-  {
-    id: "Accessories",
-    label: "Accessories",
-    path: "/shop/listing",
-  },
-  // {
-  //   id: "Search",
-  //   label: "Search",
-  //   path: "/shop/search",
-  // },
 ];
 
 export const categoryOptionsMap = {
-  DoubleBed: "Double Bed",
-  SingleBed: "Single Bed",
-  Sofa: "Sofa",
-  Accessories: "Accessories",
-  Chair: "Chair",
+  drtrust: "Dr Trust",
+  beurer: "Beurer",
+  sunfox: "Sunfox",
+  omrom: "Omrom",
+  drmorependg: "Dr Morepen DG",
+  polymedicure: "Polymedicure",
 };
 
-export const brandOptionsMap = {
-  Burrow: "Burrow",
-  Adidas: "Adidas",
-  puma: "Floyd",
-  HomeStyle: "HomeStyle",
-  levi: "Maiden Home",
-  zara: "IKEA",
-  hNm: "Godrej Interio",
-};
+// export const filterOptions = {
+//   drtrust: [{ id: "drtrust", label: "Dr Trust" }],
+//   beurer: [{ id: "beurer", label: "Beurer" }],
+//   sunfox: [{ id: "sunfox", label: "Sunfox" }],
+//   omrom: [{ id: "omrom", label: "Omrom" }],
+//   drmorependg: [{ id: "drmorependg", label: "Dr Morepen DG" }],
+//   polymedicure: [{ id: "polymedicure", label: "Polymedicure" }],
+// };
 
 export const filterOptions = {
   category: [
-    { id: "men", label: "Double Bed" },
-    { id: "Women", label: "Single Bed" },
-    { id: "Sofa", label: "Sofa" },
-    { id: "accessories", label: "Accessories" },
-    { id: "Chair", label: "Chair" },
+    { id: "drtrust", label: "Dr Trust" },
+    { id: "beurer", label: "Beurer" },
+    { id: "sunfox", label: "Sunfox" },
+    { id: "omrom", label: "Omrom" },
+    { id: "drmorependg", label: "Dr Morepen DG" },
+    { id: "polymedicure", label: "Polymedicure" },
   ],
-
-
-  brands: [
-    { id: "WoodenStreet", label: "WoodenStreet" },
-    { id: "HomeTown", label: "HomeTown" },
-    { id: "Durian", label: "Durian" },
-    { id: "Nilkamal", label: "Nilkamal" },
-    { id: "Ikea", label: "Ikea" },
-    { id: "GodrejInterio", label: "GodrejInterio" },
-  ],
-
 };
 
 export const sortOptions = [

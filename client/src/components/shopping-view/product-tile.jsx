@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardFooter } from "../ui/card";
 import { Button } from "../ui/button";
-import { brandOptionsMap, categoryOptionsMap } from "@/config";
+import { categoryOptionsMap } from "@/config";
 import { Badge } from "../ui/badge";
 
 function ShoppingProductTile({
@@ -28,21 +28,18 @@ function ShoppingProductTile({
             </Badge>
           ) : product?.salePrice > 0 ? (
             <Badge className="absolute top-2 left-2 bg-red-500 hover:bg-red-600">
-              Sale
+              Discounted
             </Badge>
           ) : null}
         </div>
         <CardContent className="p-4">
-          <h2 className="text-xl font-bold mb-2">{product?.title}</h2>
+          <h2 className="text-xl h-[80px] font-bold mb-2">{product?.title}</h2>
           <div className="flex justify-between items-center mb-2">
-            <span className="text-[16px] text-muted-foreground">
+            <span className="text-[16px] pt-4 pb-4 text-muted-foreground">
               {categoryOptionsMap[product?.category]}
             </span>
-            <span className="text-[16px] text-muted-foreground">
-              {brandOptionsMap[product?.brand]}
-            </span>
           </div>
-          <div className="flex justify-between items-center mb-2">
+          <div className="flex justify-between items-center pt-2 pb-2">
             <span
               className={`${
                 product?.salePrice > 0 ? "line-through" : ""
@@ -75,7 +72,7 @@ function ShoppingProductTile({
       console.log('Error: Invalid product details');
     }
   }}
-  className="w-full"
+  className="w-full text-[1rem]"
 >
   Add to cart
 </Button>
