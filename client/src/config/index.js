@@ -124,23 +124,19 @@ export const categoryOptionsMap = {
   polymedicure: "Polymedicure",
 };
 
-// export const filterOptions = {
-//   drtrust: [{ id: "drtrust", label: "Dr Trust" }],
-//   beurer: [{ id: "beurer", label: "Beurer" }],
-//   sunfox: [{ id: "sunfox", label: "Sunfox" }],
-//   omrom: [{ id: "omrom", label: "Omrom" }],
-//   drmorependg: [{ id: "drmorependg", label: "Dr Morepen DG" }],
-//   polymedicure: [{ id: "polymedicure", label: "Polymedicure" }],
-// };
 
 export const filterOptions = {
-  category: [
+  Category: [
     { id: "drtrust", label: "Dr Trust" },
     { id: "beurer", label: "Beurer" },
     { id: "sunfox", label: "Sunfox" },
     { id: "omrom", label: "Omrom" },
     { id: "drmorependg", label: "Dr Morepen DG" },
     { id: "polymedicure", label: "Polymedicure" },
+    { id: "ageasy", label: "AGEasy" },
+    { id: "niscomed", label: "Niscomed" },
+    { id: "agaro", label: "Agaro" },
+    { id: "contec", label: "Contec" }
   ],
 };
 

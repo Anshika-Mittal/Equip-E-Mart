@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from "react";
 import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import ShoppingProductTile from "@/components/shopping-view/product-tile";
 import { Input } from "@/components/ui/input";
@@ -8,7 +9,6 @@ import {
   getSearchResults,
   resetSearchResults,
 } from "@/store/shop/search-slice";
-import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 
@@ -19,11 +19,12 @@ function SearchProducts() {
   const dispatch = useDispatch();
   const { searchResults } = useSelector((state) => state.shopSearch);
   const { productDetails } = useSelector((state) => state.shopProducts);
-
   const { user } = useSelector((state) => state.auth);
-
   const { cartItems } = useSelector((state) => state.shopCart);
   const { toast } = useToast();
+
+  const debounceRef = useRef(null); // ⬅️ Store timeout ID
+
   useEffect(() => {
     if (keyword && keyword.trim() !== "" && keyword.trim().length > 3) {
       setTimeout(() => {
@@ -35,7 +36,6 @@ function SearchProducts() {
       dispatch(resetSearchResults());
     }
   }, [keyword]);
-
   function handleAddtoCart(getCurrentProductId, getTotalStock) {
     console.log(cartItems);
     let getCartItems = cartItems.items || [];
@@ -83,13 +83,25 @@ function SearchProducts() {
   }, [productDetails]);
 
   console.log(searchResults, "searchResults");
+  useEffect(() => {
+    if (debounceRef.current) {
+      clearTimeout(debounceRef.current); // ⬅️ Clear previous debounce
+    }
+
+    if (keyword.trim().length > 3) {
+      debounceRef.current = setTimeout(() => {
+        setSearchParams(new URLSearchParams(`?keyword=${keyword}`));
+        dispatch(getSearchResults(keyword));
+      }, 500); // ⬅️ Reduce delay to 500ms
+    }
+  }, [keyword]);
 
   return (
     <div className="container mx-auto md:px-6 px-4 py-8">
       <div className="flex justify-center mb-8">
         <div className="w-full flex items-center">
           <Input
-            value={keyword}
+            value={keyword || ""}
             name="keyword"
             onChange={(event) => setKeyword(event.target.value)}
             className="py-6"
@@ -97,22 +109,28 @@ function SearchProducts() {
           />
         </div>
       </div>
-      {!searchResults.length ? (
+
+      {/* ✅ FIX: Show "No result found" only when search has been attempted */}
+      {keyword.trim().length > 3 && searchResults?.length === 0 && (
         <h1 className="text-5xl font-extrabold">No result found!</h1>
-      ) : null}
+      )}
+      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {searchResults.map((item) => (
+        {searchResults.map((item, index) => (
           <ShoppingProductTile
+            key={item.id || index}
             handleAddtoCart={handleAddtoCart}
             product={item}
             handleGetProductDetails={handleGetProductDetails}
           />
         ))}
       </div>
+
       <ProductDetailsDialog
         open={openDetailsDialog}
         setOpen={setOpenDetailsDialog}
-        productDetails={productDetails}
+        productDetails={productDetails || {}}
       />
     </div>
   );
