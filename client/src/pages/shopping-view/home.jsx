@@ -25,7 +25,7 @@ import p18 from '../../assets/featured/p18.jpg';
 import p19 from '../../assets/featured/p19.jpg';
 
 
-
+//-
 const bannerList = [bannerOne, bannerTwo, bannerThree, bannerFour];
 const featureProdList = [
   {
