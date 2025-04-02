@@ -4,7 +4,221 @@ import bannerTwo from "../../assets/banner-2.jpeg";
 import bannerThree from "../../assets/banner-3.jpeg";
 import bannerFour from "../../assets/banner-4.jpeg";
 
+<<<<<<< HEAD
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+=======
+import p1 from '../../assets/featured/p1.jpg';
+import p2 from '../../assets/featured/p2.jpg';
+import p3 from '../../assets/featured/p3.jpg';
+import p4 from '../../assets/featured/p4.jpg';
+import p5 from '../../assets/featured/p5.jpg';
+import p6 from '../../assets/featured/p6.jpg';
+import p7 from '../../assets/featured/p7.jpg';
+import p8 from '../../assets/featured/p8.jpg';
+import p9 from '../../assets/featured/p9.jpg';
+import p10 from '../../assets/featured/p10.jpg';
+import p11 from '../../assets/featured/p11.jpg';
+import p12 from '../../assets/featured/p12.jpg';
+import p14 from '../../assets/featured/p14.jpg';
+import p15 from '../../assets/featured/p15.jpg';
+import p13 from '../../assets/featured/p13.jpg';
+import p16 from '../../assets/featured/p16.jpg';
+import p17 from '../../assets/featured/p17.jpg';
+import p18 from '../../assets/featured/p18.jpg';
+import p19 from '../../assets/featured/p19.jpg';
+
+
+//-
+const bannerList = [bannerOne, bannerTwo, bannerThree, bannerFour];
+const featureProdList = [
+  {
+    id: 1,
+    image: p1,  // image path
+    title: "Wooden Chair",
+    price: 120.00,
+    salePrice: 100.00,
+    totalStock: 50,
+    brand: "Furniture Co."
+  },
+  {
+    id: 2,
+    image: p2,
+    title: "Office Desk",
+    price: 250.00,
+    salePrice: 230.00,
+    totalStock: 30,
+    brand: "OfficeWorks"
+  },
+  {
+    id: 3,
+    image: p3,
+    title: "Recliner Sofa",
+    price: 500.00,
+    salePrice: 450.00,
+    totalStock: 15,
+    brand: "Comfy Living"
+  },
+  {
+    id: 4,
+    image: p4,
+    title: "Dining Table Set",
+    price: 350.00,
+    salePrice: 320.00,
+    totalStock: 20,
+    brand: "HomeStyle"
+  },
+  {
+    id: 5,
+    image: p5,
+    title: "Wooden Scoop and Bowl",
+    price: 450.00,
+    salePrice: 420.00,
+    totalStock: 40,
+    brand: "DreamSleep"
+  },
+  {
+    id: 6,
+    image: p6,
+    title: "Coffee Table",
+    price: 150.00,
+    salePrice: 130.00,
+    totalStock: 25,
+    brand: "WoodCraft"
+  },
+  {
+    id: 7,
+    image: p7,
+    title: "Bookshelf",
+    price: 180.00,
+    salePrice: 160.00,
+    totalStock: 35,
+    brand: "Library Essentials"
+  },
+  {
+    id: 8,
+    image: p8,
+    title: "Storage Cabinet",
+    price: 220.00,
+    salePrice: 200.00,
+    totalStock: 45,
+    brand: "SpaceSaver"
+  },
+  {
+    id: 9,
+    image: p9,
+    title: "Chair",
+    price: 90.00,
+    salePrice: 80.00,
+    totalStock: 50,
+    brand: "Modern Living"
+  },
+  {
+    id: 10,
+    image: p10,
+    title: "Chair",
+    price: 500.00,
+    salePrice: 470.00,
+    totalStock: 20,
+    brand: "WardrobePro"
+  },
+  {
+    id: 11,
+    image: p11,
+    title: "Wooden Plate",
+    price: 120.00,
+    salePrice: 100.00,
+    totalStock: 30,
+    brand: "Reflections"
+  },
+  {
+    id: 12,
+    image: p12,
+    title: "Sectional Sofa",
+    price: 600.00,
+    salePrice: 550.00,
+    totalStock: 15,
+    brand: "ComfyLiving"
+  },
+  {
+    id: 13,
+    image: p13,
+    title: "Center Table",
+    price: 120.00,
+    salePrice: 100.00,
+    totalStock: 40,
+    brand: "HomeFurnish"
+  },
+  {
+    id: 14,
+    image: p14,
+    title: "Armchair",
+    price: 200.00,
+    salePrice: 180.00,
+    totalStock: 30,
+    brand: "RelaxPlus"
+  },
+  {
+    id: 15,
+    image: p15,
+    title: "Storage Bowls",
+    price: 150.00,
+    salePrice: 130.00,
+    totalStock: 25,
+    brand: "SpaceMax"
+  },
+  {
+    id: 16,
+    image: p16,
+    title: "Flower Vase",
+    price: 170.00,
+    salePrice: 150.00,
+    totalStock: 50,
+    brand: "Furniture Plus"
+  },
+  {
+    id: 17,
+    image: p17,
+    title: "Storage Cups",
+    price: 350.00,
+    salePrice: 300.00,
+    totalStock: 20,
+    brand: "RelaxHome"
+  },
+  {
+    id: 18,
+    image: p18,
+    title: "Water Bottle",
+    price: 120.00,
+    salePrice: 100.00,
+    totalStock: 40,
+    brand: "DreamRest"
+  },
+  {
+    id: 19,
+    image: p19,
+    title: "Tea Cups",
+    price: 220.00,
+    salePrice: 200.00,
+    totalStock: 30,
+    brand: "HomeStyle"
+  }
+];
+
+
+import {
+  BedDoubleIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  Flower,
+  Flower2,
+  Heater,
+  LucideHome,
+  SofaIcon,
+  Table2Icon,
+  TicketMinus,
+  WavesIcon,
+} from "lucide-react";
+>>>>>>> 32813b5d5d64a1238dd58d48838df942a5fd7f6d
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
