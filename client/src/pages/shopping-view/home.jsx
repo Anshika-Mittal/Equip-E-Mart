@@ -70,7 +70,7 @@ import p10 from "../../assets/featured/p10.jpg";
 // import p49 from "../../assets/featured/p49.jpg";
 // import p50 from "../../assets/featured/p50.jpg";
 
-
+//-
 const bannerList = [bannerOne, bannerTwo, bannerThree, bannerFour];
 const featureProdList = [
   // Dr Trust Products
