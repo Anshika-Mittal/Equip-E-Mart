@@ -36,7 +36,7 @@ function AuthLogin() {
   return (
     <div className="container bg-[#F5F5F5] p-6 rounded-lg shadow-md">
       <div className="cta">
-        <h1 className="text-4xl font-black tracking-tighter text-slate-800 dark:text-white mb-4">
+        <h1 className="text-4xl tracking-tighter text-teal-800 dark:text-white mb-4">
           Sign in to your account
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-300">

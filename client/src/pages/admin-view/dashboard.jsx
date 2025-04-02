@@ -11,8 +11,6 @@ function AdminDashboard() {
   const dispatch = useDispatch();
   const { featureImageList } = useSelector((state) => state.commonFeature);
 
-  console.log(uploadedImageUrl, "uploadedImageUrl");
-
   function handleUploadFeatureImage() {
     dispatch(addFeatureImage(uploadedImageUrl)).then((data) => {
       if (data?.payload?.success) {
@@ -27,7 +25,6 @@ function AdminDashboard() {
     dispatch(getFeatureImages());
   }, [dispatch]);
 
-  console.log(featureImageList, "featureImageList");
 
   return (
       <div
@@ -79,21 +76,6 @@ function AdminDashboard() {
           Upload Feature Image
         </Button>
       </div>
-    // <div>
-    //   <ProductImageUpload
-    //     imageFile={imageFile}
-    //     setImageFile={setImageFile}
-    //     uploadedImageUrl={uploadedImageUrl}
-    //     setUploadedImageUrl={setUploadedImageUrl}
-    //     setImageLoadingState={setImageLoadingState}
-    //     imageLoadingState={imageLoadingState}
-    //     isCustomStyling={true}
-    //     // isEditMode={currentEditedId !== null}
-    //   />
-    //   <Button onClick={handleUploadFeatureImage} className="mt-5 w-full">
-    //     Upload
-    //   </Button>
-    // </div>
   );
 }
 

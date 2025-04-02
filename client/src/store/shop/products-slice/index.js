@@ -5,44 +5,36 @@ const initialState = {
   isLoading: false,
   productList: [],
   productDetails: null,
-  error: null, // Added error state
 };
 
-// Fetch all filtered products
 export const fetchAllFilteredProducts = createAsyncThunk(
-  "products/fetchAllProducts",
-  async ({ filterParams, sortParams }, { rejectWithValue }) => {
-    try {
-      console.log("Fetching products with filters:", filterParams, sortParams);
+  "/products/fetchAllProducts",
+  async ({ filterParams, sortParams }) => {
+    console.log(fetchAllFilteredProducts, "fetchAllFilteredProducts");
 
-      const query = new URLSearchParams({
-        ...filterParams,
-        sortBy: sortParams,
-      });
+    const query = new URLSearchParams({
+      ...filterParams,
+      sortBy: sortParams,
+    });
 
-      const result = await axios.get(
-        `http://localhost:5000/api/shop/products/get?${query}`
-      );
+    const result = await axios.get(
+      `http://localhost:5000/api/shop/products/get?${query}`
+    );
 
-      return result?.data;
-    } catch (error) {
-      return rejectWithValue(error.response?.data || error.message);
-    }
+    console.log(result);
+
+    return result?.data;
   }
 );
 
-// Fetch product details
 export const fetchProductDetails = createAsyncThunk(
-  "products/fetchProductDetails",
-  async (id, { rejectWithValue }) => {
-    try {
-      const result = await axios.get(
-        `http://localhost:5000/api/shop/products/get/${id}`
-      );
-      return result?.data;
-    } catch (error) {
-      return rejectWithValue(error.response?.data || error.message);
-    }
+  "/products/fetchProductDetails",
+  async (id) => {
+    const result = await axios.get(
+      `http://localhost:5000/api/shop/products/get/${id}`
+    );
+
+    return result?.data;
   }
 );
 
@@ -50,42 +42,37 @@ const shoppingProductSlice = createSlice({
   name: "shoppingProducts",
   initialState,
   reducers: {
-    setProductDetails: (state, action) => {
-      state.productDetails = action.payload || null;
+    setProductDetails: (state) => {
+      state.productDetails = null;
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchAllFilteredProducts.pending, (state) => {
+      .addCase(fetchAllFilteredProducts.pending, (state, action) => {
         state.isLoading = true;
-        state.error = null;
       })
       .addCase(fetchAllFilteredProducts.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.productList = action.payload?.data || [];
+        state.productList = action.payload.data;
       })
       .addCase(fetchAllFilteredProducts.rejected, (state, action) => {
         state.isLoading = false;
         state.productList = [];
-        state.error = action.payload;
-        console.error("Error fetching products:", action.payload);
       })
-      .addCase(fetchProductDetails.pending, (state) => {
+      .addCase(fetchProductDetails.pending, (state, action) => {
         state.isLoading = true;
-        state.error = null;
       })
       .addCase(fetchProductDetails.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.productDetails = action.payload?.data || null;
+        state.productDetails = action.payload.data;
       })
       .addCase(fetchProductDetails.rejected, (state, action) => {
         state.isLoading = false;
         state.productDetails = null;
-        state.error = action.payload;
-        console.error("Error fetching product details:", action.payload);
       });
   },
 });
 
 export const { setProductDetails } = shoppingProductSlice.actions;
+
 export default shoppingProductSlice.reducer;

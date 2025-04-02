@@ -1,85 +1,51 @@
-import {
-  BadgeCheck,
-  ChartNoAxesCombined,
-  LayoutDashboard,
-  ShoppingBasket,
-} from "lucide-react";
-import { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "../ui/sheet";
+import { BarChart, Users, Package, List, DollarSign, MessageSquare, AlignJustify } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
+import clsx from "clsx";
 
 const adminSidebarMenuItems = [
-  {
-    id: "dashboard",
-    label: "Dashboard",
-    path: "/admin/dashboard",
-    icon: <LayoutDashboard />,
-  },
-  {
-    id: "products",
-    label: "Products",
-    path: "/admin/products",
-    icon: <ShoppingBasket />,
-  },
-  {
-    id: "orders",
-    label: "Orders",
-    path: "/admin/orders",
-    icon: <BadgeCheck />,
-  },
+  { name: "Dashboard", icon: BarChart, key: "dashboard", path: "/admin/dashboard" },
+  { name: "Users", icon: Users, key: "users", path: "/admin/users" },
+  { name: "Products", icon: Package, key: "products", path: "/admin/products" },
+  { name: "Orders", icon: List, key: "orders", path: "/admin/orders" },
+  { name: "Transactions", icon: DollarSign, key: "transactions", path: "/admin/transactions" },
+  { name: "Chatbot Insights", icon: MessageSquare, key: "chatbot", path: "/admin/chatbot" },
 ];
 
-function MenuItems({ setOpen }) {
-  const navigate = useNavigate();
-
-  return (
-    <nav className="mt-8 flex-col flex gap-2">
-      {adminSidebarMenuItems.map((menuItem) => (
-        <div
-          key={menuItem.id}
-          onClick={() => {
-            navigate(menuItem.path);
-            setOpen ? setOpen(false) : null;
-          }}
-          className="flex cursor-pointer text-xl items-center gap-2 rounded-md px-3 py-2 text-muted-foreground hover:bg-muted hover:text-foreground"
-        >
-          {menuItem.icon}
-          <span>{menuItem.label}</span>
-        </div>
-      ))}
-    </nav>
-  );
-}
 
 function AdminSideBar({ open, setOpen }) {
   const navigate = useNavigate();
 
   return (
-    <Fragment>
-      <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="left" className="w-64">
-          <div className="flex flex-col h-full">
-            <SheetHeader className="border-b">
-              <SheetTitle className="flex gap-2 mt-5 mb-5">
-                <ChartNoAxesCombined size={30} />
-                <h1 className="text-2xl font-extrabold">Admin Panel</h1>
-              </SheetTitle>
-            </SheetHeader>
-            <MenuItems setOpen={setOpen} />
-          </div>
-        </SheetContent>
-      </Sheet>
-      <aside className="hidden w-64 flex-col border-r bg-background p-6 lg:flex">
-        <div
-          onClick={() => navigate("/admin/dashboard")}
-          className="flex cursor-pointer items-center gap-2"
-        >
-          <ChartNoAxesCombined size={30} />
-          <h1 className="text-2xl font-extrabold">Admin Panel</h1>
+      <aside
+        className={clsx(
+          "fixed top-0 left-0 h-screen w-72 bg-gray-900 text-white p-5 transform transition-transform z-50"
+        )}
+      >
+        {/* Sidebar Header */}
+        <div className=" items-center ml-6">
+          <h1 onClick={() => navigate("/admin/admin-home")} className="text-2xl font-bold cursor-pointer">
+            Admin Panel
+          </h1>
+
         </div>
-        <MenuItems />
+        {/* Menu Items */}
+      {adminSidebarMenuItems.map((menuItem) => (
+        <div
+          key={menuItem.key}
+          onClick={() => navigate(menuItem.path)}
+          className={clsx(
+            "flex items-center gap-3 p-3 rounded-md cursor-pointer transition text-gray-300",
+            window.location.pathname === menuItem.path ? "bg-gray-700 text-white" : "hover:bg-gray-800"
+          )}
+        >
+          <menuItem.icon className="size-5" />
+          <span className="font-medium">{menuItem.name}</span>
+        </div>
+           ))}
+
+        {/* Sidebar Menu */}
+        {/* <MenuItems setOpen={setOpen} /> */}
       </aside>
-    </Fragment>
   );
 }
 

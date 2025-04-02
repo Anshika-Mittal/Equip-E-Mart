@@ -7,7 +7,10 @@ import AdminDashboard from "./pages/admin-view/dashboard";
 import AdminHome from "./pages/admin-view/admin-home";
 import AdminProducts from "./pages/admin-view/products";
 import AdminOrders from "./pages/admin-view/orders";
-// import AdminFeatures from "./pages/admin-view/features";
+import AdminFeatures from "./pages/admin-view/features";
+import AdminTransactions from "./pages/admin-view/transactions";
+import AdminUsers from "./pages/admin-view/users";
+import AdminChatbot from "./pages/admin-view/chatbot";
 import ShoppingLayout from "./components/shopping-view/layout";
 import NotFound from "./pages/not-found";
 import ShoppingHome from "./pages/shopping-view/home";
@@ -41,6 +44,13 @@ function App() {
   return (
     <div className="flex flex-col overflow-hidden bg-white">
       <Routes>
+      <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/users" element={<AdminUsers />} />
+            <Route path="/admin/products" element={<AdminProducts />} />
+            <Route path="/admin/orders" element={<AdminOrders />} />
+            <Route path="/admin/transactions" element={<AdminTransactions />} />
+            <Route path="/admin/chatbot" element={<AdminChatbot />} />
+            <Route path="/admin/admin-home" element={<AdminHome />} />
         <Route
           path="/"
           element={
@@ -69,11 +79,14 @@ function App() {
             </CheckAuth>
           }
         >
-          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="Dashboard" element={<AdminDashboard />} />
+          <Route path="users" element={<AdminUsers />} />
+          <Route path="chatbot" element={<AdminChatbot />} />
           <Route path="admin-home" element={<AdminHome />} />
           <Route path="products" element={<AdminProducts />} />
           <Route path="orders" element={<AdminOrders />} />
-          {/* <Route path="features" element={<AdminFeatures />} /> */}
+          <Route path="features" element={<AdminFeatures />} />
+          <Route path="transactions" element={<AdminTransactions />} />
         </Route>
         <Route
           path="/shop"

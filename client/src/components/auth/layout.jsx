@@ -1,21 +1,40 @@
 import { Outlet } from "react-router-dom";
+// import AdminSideBar from "@components/admin-view/sidebar";
+// import AdminHeader from "@components/admin-view/header";
+import { useState } from "react";
+import logo from "@/components/shopping-view/logo.jpeg";
+
 
 function AuthLayout() {
+  
+  const [openSidebar, setOpenSidebar] = useState(false);
+
   return (
-    <div className="flex min-h-screen w-full">
-      <div className="hidden lg:flex items-center justify-center bg-black w-1/2 px-12">
-        
-        <div className="text-center max-w-md mx-auto py-6">
- <h1 className="text-4xl font-black tracking-tighter text-white mb-4">
-  <span className="bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 text-transparent bg-clip-text"> Welcome to Euip-E-Mart</span>
- </h1>
- <p className="text-lg text-slate-300 leading-relaxed">
-  <span className="text-teal-300 font-semibold">Your trusted partner  </span>  <span className="text-blue-300 font-semibold">in revolutionizing</span> <span className="text-purple-300 font-semibold">hospital procurement.</span>
- </p>
-</div>
+    <div className="flex h-screen w-full">
+     
+      {/* Left side (with background animation and text) */}
+      <div className="hidden lg:flex items-center justify-center  w-1/2 px-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-500 via-cyan-600 to-blue-800 opacity-40 animate-pulse" />
+        <div className="text-center  mx-auto py-6 relative z-10">
+          <h1 className="text-7xl font-extrabold tracking-tighter text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">
+            <span className="bg-gradient-to-r from-teal-500 via-cyan-600 to-blue-800 text-transparent bg-clip-text">
+              
+          <img src={logo} alt="" className="w-30 h-30 ml-40 p-10 object-cover" />WELCOME TO </span>
+              <br />
+              <span className="bg-gradient-to-r from-teal-500 via-cyan-600 to-blue-800 text-transparent bg-clip-text">
+               EQUIP-E-MART </span>
+          </h1>
+          <p className="text-3xl text-slate-100 font-semibold leading-relaxed animate__animated animate__fadeIn animate__delay-2s">
+            Your trusted partner in <span className="text-teal-500">revolutionizing</span> hospital procurement.
+          </p>
+        </div>
       </div>
-      <div className="flex flex-1 items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
-        <Outlet />
+
+      {/* Right side (Login/Register forms) */}
+      <div className="flex flex-1 items-center justify-center bg-gray-50 px-4 py-12 sm:px-6 lg:px-8 relative">
+        <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-br hover:from-teal-500 hover:to-indigo-500">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
