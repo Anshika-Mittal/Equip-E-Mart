@@ -122,6 +122,10 @@ export const categoryOptionsMap = {
   omrom: "Omrom",
   drmorependg: "Dr Morepen DG",
   polymedicure: "Polymedicure",
+  ageasy: "AGEasy",
+  niscomed: "Niscomed",
+  agaro: "Agaro",
+  contec: "Contec",
 };
 
 

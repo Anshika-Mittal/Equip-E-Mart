@@ -4,221 +4,7 @@ import bannerTwo from "../../assets/banner-2.jpeg";
 import bannerThree from "../../assets/banner-3.jpeg";
 import bannerFour from "../../assets/banner-4.jpeg";
 
-<<<<<<< HEAD
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-=======
-import p1 from '../../assets/featured/p1.jpg';
-import p2 from '../../assets/featured/p2.jpg';
-import p3 from '../../assets/featured/p3.jpg';
-import p4 from '../../assets/featured/p4.jpg';
-import p5 from '../../assets/featured/p5.jpg';
-import p6 from '../../assets/featured/p6.jpg';
-import p7 from '../../assets/featured/p7.jpg';
-import p8 from '../../assets/featured/p8.jpg';
-import p9 from '../../assets/featured/p9.jpg';
-import p10 from '../../assets/featured/p10.jpg';
-import p11 from '../../assets/featured/p11.jpg';
-import p12 from '../../assets/featured/p12.jpg';
-import p14 from '../../assets/featured/p14.jpg';
-import p15 from '../../assets/featured/p15.jpg';
-import p13 from '../../assets/featured/p13.jpg';
-import p16 from '../../assets/featured/p16.jpg';
-import p17 from '../../assets/featured/p17.jpg';
-import p18 from '../../assets/featured/p18.jpg';
-import p19 from '../../assets/featured/p19.jpg';
-
-
-//-
-const bannerList = [bannerOne, bannerTwo, bannerThree, bannerFour];
-const featureProdList = [
-  {
-    id: 1,
-    image: p1,  // image path
-    title: "Wooden Chair",
-    price: 120.00,
-    salePrice: 100.00,
-    totalStock: 50,
-    brand: "Furniture Co."
-  },
-  {
-    id: 2,
-    image: p2,
-    title: "Office Desk",
-    price: 250.00,
-    salePrice: 230.00,
-    totalStock: 30,
-    brand: "OfficeWorks"
-  },
-  {
-    id: 3,
-    image: p3,
-    title: "Recliner Sofa",
-    price: 500.00,
-    salePrice: 450.00,
-    totalStock: 15,
-    brand: "Comfy Living"
-  },
-  {
-    id: 4,
-    image: p4,
-    title: "Dining Table Set",
-    price: 350.00,
-    salePrice: 320.00,
-    totalStock: 20,
-    brand: "HomeStyle"
-  },
-  {
-    id: 5,
-    image: p5,
-    title: "Wooden Scoop and Bowl",
-    price: 450.00,
-    salePrice: 420.00,
-    totalStock: 40,
-    brand: "DreamSleep"
-  },
-  {
-    id: 6,
-    image: p6,
-    title: "Coffee Table",
-    price: 150.00,
-    salePrice: 130.00,
-    totalStock: 25,
-    brand: "WoodCraft"
-  },
-  {
-    id: 7,
-    image: p7,
-    title: "Bookshelf",
-    price: 180.00,
-    salePrice: 160.00,
-    totalStock: 35,
-    brand: "Library Essentials"
-  },
-  {
-    id: 8,
-    image: p8,
-    title: "Storage Cabinet",
-    price: 220.00,
-    salePrice: 200.00,
-    totalStock: 45,
-    brand: "SpaceSaver"
-  },
-  {
-    id: 9,
-    image: p9,
-    title: "Chair",
-    price: 90.00,
-    salePrice: 80.00,
-    totalStock: 50,
-    brand: "Modern Living"
-  },
-  {
-    id: 10,
-    image: p10,
-    title: "Chair",
-    price: 500.00,
-    salePrice: 470.00,
-    totalStock: 20,
-    brand: "WardrobePro"
-  },
-  {
-    id: 11,
-    image: p11,
-    title: "Wooden Plate",
-    price: 120.00,
-    salePrice: 100.00,
-    totalStock: 30,
-    brand: "Reflections"
-  },
-  {
-    id: 12,
-    image: p12,
-    title: "Sectional Sofa",
-    price: 600.00,
-    salePrice: 550.00,
-    totalStock: 15,
-    brand: "ComfyLiving"
-  },
-  {
-    id: 13,
-    image: p13,
-    title: "Center Table",
-    price: 120.00,
-    salePrice: 100.00,
-    totalStock: 40,
-    brand: "HomeFurnish"
-  },
-  {
-    id: 14,
-    image: p14,
-    title: "Armchair",
-    price: 200.00,
-    salePrice: 180.00,
-    totalStock: 30,
-    brand: "RelaxPlus"
-  },
-  {
-    id: 15,
-    image: p15,
-    title: "Storage Bowls",
-    price: 150.00,
-    salePrice: 130.00,
-    totalStock: 25,
-    brand: "SpaceMax"
-  },
-  {
-    id: 16,
-    image: p16,
-    title: "Flower Vase",
-    price: 170.00,
-    salePrice: 150.00,
-    totalStock: 50,
-    brand: "Furniture Plus"
-  },
-  {
-    id: 17,
-    image: p17,
-    title: "Storage Cups",
-    price: 350.00,
-    salePrice: 300.00,
-    totalStock: 20,
-    brand: "RelaxHome"
-  },
-  {
-    id: 18,
-    image: p18,
-    title: "Water Bottle",
-    price: 120.00,
-    salePrice: 100.00,
-    totalStock: 40,
-    brand: "DreamRest"
-  },
-  {
-    id: 19,
-    image: p19,
-    title: "Tea Cups",
-    price: 220.00,
-    salePrice: 200.00,
-    totalStock: 30,
-    brand: "HomeStyle"
-  }
-];
-
-
-import {
-  BedDoubleIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  Flower,
-  Flower2,
-  Heater,
-  LucideHome,
-  SofaIcon,
-  Table2Icon,
-  TicketMinus,
-  WavesIcon,
-} from "lucide-react";
->>>>>>> 32813b5d5d64a1238dd58d48838df942a5fd7f6d
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -243,46 +29,46 @@ import p7 from "../../assets/featured/p7.jpg";
 import p8 from "../../assets/featured/p8.jpg";
 import p9 from "../../assets/featured/p9.jpg";
 import p10 from "../../assets/featured/p10.jpg";
-// import p11 from "../../assets/featured/p11.jpg";
-// import p12 from "../../assets/featured/p12.jpg";
-// import p13 from "../../assets/featured/p13.jpg";
-// import p14 from "../../assets/featured/p14.jpg";
-// import p15 from "../../assets/featured/p15.jpg";
-// import p16 from "../../assets/featured/p16.jpg";
-// import p17 from "../../assets/featured/p17.jpg";
-// import p18 from "../../assets/featured/p18.jpg";
-// import p19 from "../../assets/featured/p19.jpg";
-// import p20 from "../../assets/featured/p20.jpg";
-// import p21 from "../../assets/featured/p21.jpg";
-// import p22 from "../../assets/featured/p22.jpg";
-// import p23 from "../../assets/featured/p23.jpg";
-// import p24 from "../../assets/featured/p24.jpg";
-// import p25 from "../../assets/featured/p25.jpg";
-// import p26 from "../../assets/featured/p26.jpg";
-// import p27 from "../../assets/featured/p27.jpg";
-// import p28 from "../../assets/featured/p28.jpg";
-// import p29 from "../../assets/featured/p29.jpg";
-// import p30 from "../../assets/featured/p30.jpg";
-// import p31 from "../../assets/featured/p31.jpg";
-// import p32 from "../../assets/featured/p32.jpg";
-// import p33 from "../../assets/featured/p33.jpg";
-// import p34 from "../../assets/featured/p34.jpg";
-// import p35 from "../../assets/featured/p35.jpg";
-// import p36 from "../../assets/featured/p36.jpg";
-// import p37 from "../../assets/featured/p37.jpg";
-// import p38 from "../../assets/featured/p38.jpg";
-// import p39 from "../../assets/featured/p39.jpg";
-// import p40 from "../../assets/featured/p40.jpg";
-// import p41 from "../../assets/featured/p41.jpg";
-// import p42 from "../../assets/featured/p42.jpg";
-// import p43 from "../../assets/featured/p43.jpg";
-// import p44 from "../../assets/featured/p44.jpg";
-// import p45 from "../../assets/featured/p45.jpg";
-// import p46 from "../../assets/featured/p46.jpg";
-// import p47 from "../../assets/featured/p47.jpg";
-// import p48 from "../../assets/featured/p48.jpg";
-// import p49 from "../../assets/featured/p49.jpg";
-// import p50 from "../../assets/featured/p50.jpg";
+import p11 from "../../assets/featured/p11.jpg";
+import p12 from "../../assets/featured/p12.jpg";
+import p13 from "../../assets/featured/p13.jpg";
+import p14 from "../../assets/featured/p14.jpg";
+import p15 from "../../assets/featured/p15.jpg";
+import p16 from "../../assets/featured/p16.jpg";
+import p17 from "../../assets/featured/p17.jpg";
+import p18 from "../../assets/featured/p18.jpg";
+import p19 from "../../assets/featured/p19.jpg";
+import p20 from "../../assets/featured/p20.jpg";
+import p21 from "../../assets/featured/p21.jpg";
+import p22 from "../../assets/featured/p22.jpg";
+import p23 from "../../assets/featured/p23.jpg";
+import p24 from "../../assets/featured/p24.jpg";
+import p25 from "../../assets/featured/p25.jpg";
+import p26 from "../../assets/featured/p26.jpg";
+import p27 from "../../assets/featured/p27.jpg";
+import p28 from "../../assets/featured/p28.jpg";
+import p29 from "../../assets/featured/p29.jpg";
+import p30 from "../../assets/featured/p30.jpg";
+import p31 from "../../assets/featured/p31.jpg";
+import p32 from "../../assets/featured/p32.jpg";
+import p33 from "../../assets/featured/p33.jpg";
+import p34 from "../../assets/featured/p34.jpg";
+import p35 from "../../assets/featured/p35.jpg";
+import p36 from "../../assets/featured/p36.jpg";
+import p37 from "../../assets/featured/p37.jpg";
+import p38 from "../../assets/featured/p38.jpg";
+import p39 from "../../assets/featured/p39.jpg";
+import p40 from "../../assets/featured/p40.jpg";
+import p41 from "../../assets/featured/p41.jpg";
+import p42 from "../../assets/featured/p42.jpg";
+import p43 from "../../assets/featured/p43.jpg";
+import p44 from "../../assets/featured/p44.jpg";
+import p45 from "../../assets/featured/p45.jpg";
+import p46 from "../../assets/featured/p46.jpg";
+import p47 from "../../assets/featured/p47.jpg";
+import p48 from "../../assets/featured/p48.jpg";
+import p49 from "../../assets/featured/p49.jpg";
+import p50 from "../../assets/featured/p50.jpg";
 
 
 const bannerList = [bannerOne, bannerTwo, bannerThree, bannerFour];
@@ -362,300 +148,300 @@ const featureProdList = [
   },
 
   // Sunfox Products
-  // {
-  //   id: 11,
-  //   image: p11,
-  //   title: "Spandan Portable ECG Device",
-  //   price: 5999.0,
-  //   category: "sunfox",
-  // },
-  // {
-  //   id: 12,
-  //   image: p12,
-  //   title: "SF1 Pulse Oximeter",
-  //   price: 1500.0,
-  //   category: "sunfox",
-  // },
-  // {
-  //   id: 13,
-  //   image: p13,
-  //   title: "SF2 Digital Thermometer",
-  //   price: 500.0,
-  //   category: "sunfox",
-  // },
-  // {
-  //   id: 14,
-  //   image: p14,
-  //   title: "SF3 Blood Pressure Monitor",
-  //   price: 2000.0,
-  //   category: "sunfox",
-  // },
-  // {
-  //   id: 15,
-  //   image: p15,
-  //   title: "SF4 Glucometer",
-  //   price: 1700.0,
-  //   category: "sunfox",
-  // },
+  {
+    id: 11,
+    image: p11,
+    title: "Spandan Portable ECG Device",
+    price: 5999.0,
+    category: "sunfox",
+  },
+  {
+    id: 12,
+    image: p12,
+    title: "SF1 Pulse Oximeter",
+    price: 1500.0,
+    category: "sunfox",
+  },
+  {
+    id: 13,
+    image: p13,
+    title: "SF2 Digital Thermometer",
+    price: 500.0,
+    category: "sunfox",
+  },
+  {
+    id: 14,
+    image: p14,
+    title: "SF3 Blood Pressure Monitor",
+    price: 2000.0,
+    category: "sunfox",
+  },
+  {
+    id: 15,
+    image: p15,
+    title: "SF4 Glucometer",
+    price: 1700.0,
+    category: "sunfox",
+  },
 
-  // // Omron Products
-  // {
-  //   id: 16,
-  //   image: p16,
-  //   title: "BP7900 Complete Wireless Upper Arm Blood Pressure Monitor + EKG",
-  //   price: 13800.0,
-  //   category: "omron",
-  // },
-  // {
-  //   id: 17,
-  //   image: p17,
-  //   title: "HEM 7120 Fully Automatic Digital Blood Pressure Monitor",
-  //   price: 2500.0,
-  //   category: "omron",
-  // },
-  // {
-  //   id: 18,
-  //   image: p18,
-  //   title: "MC 246 Digital Thermometer",
-  //   price: 300.0,
-  //   category: "omron",
-  // },
-  // {
-  //   id: 19,
-  //   image: p19,
-  //   title: "HGM-112 Glucometer",
-  //   price: 1800.0,
-  //   category: "omron",
-  // },
-  // {
-  //   id: 20,
-  //   image: p20,
-  //   title: "NE C28 Compressor Nebulizer",
-  //   price: 2800.0,
-  //   category: "omron",
-  // },
+  // Omron Products
+  {
+    id: 16,
+    image: p16,
+    title: "BP7900 Complete Wireless Upper Arm Blood Pressure Monitor + EKG",
+    price: 13800.0,
+    category: "omron",
+  },
+  {
+    id: 17,
+    image: p17,
+    title: "HEM 7120 Fully Automatic Digital Blood Pressure Monitor",
+    price: 2500.0,
+    category: "omron",
+  },
+  {
+    id: 18,
+    image: p18,
+    title: "MC 246 Digital Thermometer",
+    price: 300.0,
+    category: "omron",
+  },
+  {
+    id: 19,
+    image: p19,
+    title: "HGM-112 Glucometer",
+    price: 1800.0,
+    category: "omron",
+  },
+  {
+    id: 20,
+    image: p20,
+    title: "NE C28 Compressor Nebulizer",
+    price: 2800.0,
+    category: "omron",
+  },
 
-  // // Dr Morepen Products
-  // {
-  //   id: 21,
-  //   image: p21,
-  //   title: "BP 02 Blood Pressure Monitor",
-  //   price: 1087.0,
-  //   category: "drmorepen",
-  // },
-  // {
-  //   id: 22,
-  //   image: p22,
-  //   title: "BG 03 Gluco One Glucose Monitoring System",
-  //   price: 524.0,
-  //   category: "drmorepen",
-  // },
-  // {
-  //   id: 23,
-  //   image: p23,
-  //   title: "ST01A Deluxe Stethoscope",
-  //   price: 264.0,
-  //   category: "drmorepen",
-  // },
-  // {
-  //   id: 24,
-  //   image: p24,
-  //   title: "MT 100 Digi Classic Digital Thermometer",
-  //   price: 190.0,
-  //   category: "drmorepen",
-  // },
-  // {
-  //   id: 25,
-  //   image: p25,
-  //   title: "CN 10 Compressor Nebuliser",
-  //   price: 1449.0,
-  //   category: "drmorepen",
-  // },
+  // Dr Morepen Products
+  {
+    id: 21,
+    image: p21,
+    title: "BP 02 Blood Pressure Monitor",
+    price: 1087.0,
+    category: "drmorepen",
+  },
+  {
+    id: 22,
+    image: p22,
+    title: "BG 03 Gluco One Glucose Monitoring System",
+    price: 524.0,
+    category: "drmorepen",
+  },
+  {
+    id: 23,
+    image: p23,
+    title: "ST01A Deluxe Stethoscope",
+    price: 264.0,
+    category: "drmorepen",
+  },
+  {
+    id: 24,
+    image: p24,
+    title: "MT 100 Digi Classic Digital Thermometer",
+    price: 190.0,
+    category: "drmorepen",
+  },
+  {
+    id: 25,
+    image: p25,
+    title: "CN 10 Compressor Nebuliser",
+    price: 1449.0,
+    category: "drmorepen",
+  },
 
-  // // Polymedicure Products
-  // {
-  //   id: 26,
-  //   image: p26,
-  //   title: "Chemo Port",
-  //   price: 5000.0,
-  //   category: "polymedicure",
-  // },
-  // {
-  //   id: 27,
-  //   image: p27,
-  //   title: "Health Port Power",
-  //   price: 5500.0,
-  //   category: "polymedicure",
-  // },
-  // {
-  //   id: 28,
-  //   image: p28,
-  //   title: "PICC Port",
-  //   price: 6000.0,
-  //   category: "polymedicure",
-  // },
-  // {
-  //   id: 29,
-  //   image: p29,
-  //   title: "Ryle’s Tube",
-  //   price: 150.0,
-  //   category: "polymedicure",
-  // },
-  // {
-  //   id: 30,
-  //   image: p30,
-  //   title: "Umbilical Catheter",
-  //   price: 200.0,
-  //   category: "polymedicure",
-  // },
+  // Polymedicure Products
+  {
+    id: 26,
+    image: p26,
+    title: "Chemo Port",
+    price: 5000.0,
+    category: "polymedicure",
+  },
+  {
+    id: 27,
+    image: p27,
+    title: "Health Port Power",
+    price: 5500.0,
+    category: "polymedicure",
+  },
+  {
+    id: 28,
+    image: p28,
+    title: "PICC Port",
+    price: 6000.0,
+    category: "polymedicure",
+  },
+  {
+    id: 29,
+    image: p29,
+    title: "Ryle’s Tube",
+    price: 150.0,
+    category: "polymedicure",
+  },
+  {
+    id: 30,
+    image: p30,
+    title: "Umbilical Catheter",
+    price: 200.0,
+    category: "polymedicure",
+  },
 
-  // // Ageasy Products
-  // {
-  //   id: 31,
-  //   image: p31,
-  //   title: "Digital Blood Pressure Monitor",
-  //   price: 2200.0,
-  //   category: "ageasy",
-  // },
-  // {
-  //   id: 32,
-  //   image: p32,
-  //   title: "Infrared Forehead Thermometer",
-  //   price: 1500.0,
-  //   category: "ageasy",
-  // },
-  // {
-  //   id: 33,
-  //   image: p33,
-  //   title: "Pulse Oximeter",
-  //   price: 1300.0,
-  //   category: "ageasy",
-  //   },
-  //   {
-  //     id: 34,
-  //     image: p34,
-  //     title: "Digital Weighing Scale",
-  //     price: 1700.0,
-  //     category: "ageasy",
-  //   },
-  //   {
-  //     id: 35,
-  //     image: p35,
-  //     title: "Nebulizer Machine",
-  //     price: 2500.0,
-  //     category: "ageasy",
-  //   },
-  //   {
-  //     id: 36,
-  //     image: p36,
-  //     title: "Fingertip Pulse Oximeter",
-  //     price: 1200.0,
-  //     category: "ageasy",
-  //   },
+  // Ageasy Products
+  {
+    id: 31,
+    image: p31,
+    title: "Digital Blood Pressure Monitor",
+    price: 2200.0,
+    category: "ageasy",
+  },
+  {
+    id: 32,
+    image: p32,
+    title: "Infrared Forehead Thermometer",
+    price: 1500.0,
+    category: "ageasy",
+  },
+  {
+    id: 33,
+    image: p33,
+    title: "Pulse Oximeter",
+    price: 1300.0,
+    category: "ageasy",
+    },
+    {
+      id: 34,
+      image: p34,
+      title: "Digital Weighing Scale",
+      price: 1700.0,
+      category: "ageasy",
+    },
+    {
+      id: 35,
+      image: p35,
+      title: "Nebulizer Machine",
+      price: 2500.0,
+      category: "ageasy",
+    },
+    {
+      id: 36,
+      image: p36,
+      title: "Fingertip Pulse Oximeter",
+      price: 1200.0,
+      category: "ageasy",
+    },
   
-  //   // Niscomed Products
-  //   {
-  //     id: 37,
-  //     image: p37,
-  //     title: "PC-60B1 Fingertip Pulse Oximeter",
-  //     price: 1600.0,
-  //     category: "niscomed",
-  //   },
-  //   {
-  //     id: 38,
-  //     image: p38,
-  //     title: "SPM-50 Patient Monitor",
-  //     price: 9800.0,
-  //     category: "niscomed",
-  //   },
-  //   {
-  //     id: 39,
-  //     image: p39,
-  //     title: "VC-20C Nebulizer",
-  //     price: 3200.0,
-  //     category: "niscomed",
-  //   },
-  //   {
-  //     id: 40,
-  //     image: p40,
-  //     title: "ECG 3-Channel Machine",
-  //     price: 24000.0,
-  //     category: "niscomed",
-  //   },
-  //   {
-  //     id: 41,
-  //     image: p41,
-  //     title: "SPM-10 Multiparameter Monitor",
-  //     price: 12000.0,
-  //     category: "niscomed",
-  //   },
+    // Niscomed Products
+    {
+      id: 37,
+      image: p37,
+      title: "PC-60B1 Fingertip Pulse Oximeter",
+      price: 1600.0,
+      category: "niscomed",
+    },
+    {
+      id: 38,
+      image: p38,
+      title: "SPM-50 Patient Monitor",
+      price: 9800.0,
+      category: "niscomed",
+    },
+    {
+      id: 39,
+      image: p39,
+      title: "VC-20C Nebulizer",
+      price: 3200.0,
+      category: "niscomed",
+    },
+    {
+      id: 40,
+      image: p40,
+      title: "ECG 3-Channel Machine",
+      price: 24000.0,
+      category: "niscomed",
+    },
+    {
+      id: 41,
+      image: p41,
+      title: "SPM-10 Multiparameter Monitor",
+      price: 12000.0,
+      category: "niscomed",
+    },
   
-  //   // Agaro Products
-  //   {
-  //     id: 42,
-  //     image: p42,
-  //     title: "NB-21 Nebulizer",
-  //     price: 2100.0,
-  //     category: "agaro",
-  //   },
-  //   {
-  //     id: 43,
-  //     image: p43,
-  //     title: "BP-501 Blood Pressure Monitor",
-  //     price: 1900.0,
-  //     category: "agaro",
-  //   },
-  //   {
-  //     id: 44,
-  //     image: p44,
-  //     title: "FT-301 Infrared Thermometer",
-  //     price: 1600.0,
-  //     category: "agaro",
-  //   },
-  //   {
-  //     id: 45,
-  //     image: p45,
-  //     title: "PG-10 Glucometer",
-  //     price: 1400.0,
-  //     category: "agaro",
-  //   },
-  //   {
-  //     id: 46,
-  //     image: p46,
-  //     title: "WE-01 Digital Weighing Scale",
-  //     price: 1100.0,
-  //     category: "agaro",
-  //   },
+    // Agaro Products
+    {
+      id: 42,
+      image: p42,
+      title: "NB-21 Nebulizer",
+      price: 2100.0,
+      category: "agaro",
+    },
+    {
+      id: 43,
+      image: p43,
+      title: "BP-501 Blood Pressure Monitor",
+      price: 1900.0,
+      category: "agaro",
+    },
+    {
+      id: 44,
+      image: p44,
+      title: "FT-301 Infrared Thermometer",
+      price: 1600.0,
+      category: "agaro",
+    },
+    {
+      id: 45,
+      image: p45,
+      title: "PG-10 Glucometer",
+      price: 1400.0,
+      category: "agaro",
+    },
+    {
+      id: 46,
+      image: p46,
+      title: "WE-01 Digital Weighing Scale",
+      price: 1100.0,
+      category: "agaro",
+    },
   
-  //   // Contec Products
-  //   {
-  //     id: 47,
-  //     image: p47,
-  //     title: "CMS50D Pulse Oximeter",
-  //     price: 2000.0,
-  //     category: "contec",
-  //   },
-  //   {
-  //     id: 48,
-  //     image: p48,
-  //     title: "CMS5100 Patient Monitor",
-  //     price: 15000.0,
-  //     category: "contec",
-  //   },
-  //   {
-  //     id: 49,
-  //     image: p49,
-  //     title: "ECG100G Portable ECG Machine",
-  //     price: 22000.0,
-  //     category: "contec",
-  //   },
-  //   {
-  //     id: 50,
-  //     image: p50,
-  //     title: "ABPM50 Ambulatory Blood Pressure Monitor",
-  //     price: 18000.0,
-  //     category: "contec",
-  //   }
+    // Contec Products
+    {
+      id: 47,
+      image: p47,
+      title: "CMS50D Pulse Oximeter",
+      price: 2000.0,
+      category: "contec",
+    },
+    {
+      id: 48,
+      image: p48,
+      title: "CMS5100 Patient Monitor",
+      price: 15000.0,
+      category: "contec",
+    },
+    {
+      id: 49,
+      image: p49,
+      title: "ECG100G Portable ECG Machine",
+      price: 22000.0,
+      category: "contec",
+    },
+    {
+      id: 50,
+      image: p50,
+      title: "ABPM50 Ambulatory Blood Pressure Monitor",
+      price: 18000.0,
+      category: "contec",
+    }
   ];
 
 
@@ -879,7 +665,6 @@ function ShoppingHome() {
       </section>
 
 
-<p className="w-full bg-red-400">Hii</p>
 
       <ProductDetailsDialog
         open={openDetailsDialog}
